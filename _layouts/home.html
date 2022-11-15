@@ -2,33 +2,6 @@
 layout: default
 ---
 
-<section class="hero is-link is-medium">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns">
-                <div class="column is-one-fifth">
-                    <div class="columns is-flex is-centered">
-                        <figure class="image is-128x128">
-                            <img class="is-rounded" src="{{ '/assets/images/me.jpg?v=' | append: site.github.build_revision | relative_url }}">
-                        </figure>
-                    </div>
-                </div>
-                <div class="column">
-                    <h1 class="title">Hola! Mi nombre es Jorge</h1>
-                    <h2 class="subtitle">y doy soluciones simples a problemas complejos</h2>
-                    <p>
-                        <span class="icon">
-                            <a href="https://linkedin.com/in/jaxkodex" class="has-text-white"><i class="fab fa-2x fa-linkedin"></i></a>
-                        </span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="p-4">This is a tailwindcss test</div>
-
 <section class="section">
     <div class="container">
         {% for post in site.posts %}
