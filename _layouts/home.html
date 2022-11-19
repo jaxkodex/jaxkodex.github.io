@@ -2,13 +2,16 @@
 layout: default
 ---
 
-<section class="container mt-4 px-3">
+<section class="container mt-4 px-3 mx-auto">
   <div class="bg-gray-600 py-2">
     {% for post in site.posts %}
     <div class="px-4 mt-2 mb-3">
-      <a href="{{post.url}}" class="text-md text-yellow-400 font-bold">{{ post.title }}</a>
-      <h3 class="text-sm text-blue-200">{{ post.date | date: "%d %B, %Y" }}</h3>
-      <p class="mt-3 text-sm text-gray-300">{{ post.subtitle }}</p>
+      <a href="{{post.url}}" class="text-md text-yellow-400 font-bold"><h3>{{ post.title }}</h3></a>
+      <h4 class="text-sm text-gray-300">{{ post.subtitle }}</h4>
+      <p class="text-sm text-blue-200">{{ post.date | date: "%d %B, %Y" }}</p>
+      <div class="text-sm mt-3 text-gray-300">
+        {{post.summary}}
+      </div>
       <div class="mt-2">
         <a href="{{post.url}}" class="text-xs text-blue-400 underline">Leer más</a>
       </div>
