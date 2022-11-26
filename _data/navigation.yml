@@ -1,0 +1,9 @@
+languages:
+- language: "en"
+  links:
+  - title: "es"
+    url: /es/
+- language: "es"
+  links:
+  - title: "en"
+    url: /

@@ -1,4 +1,6 @@
 #theme: jekyll-theme-minimal
 title: jaxkodex
+lang: en
+languages: ["en", "es"]
 plugins:
   - jekyll-sitemap

@@ -1,11 +1,13 @@
 ---
 layout: default
 ---
+{% capture site_lang %}{{ site.lang | default: "en" }}{% endcapture %}
+{% assign posts=site.posts | where:"lang", page.lang %}
 
 <section class="container mt-4 px-3 mx-auto">
-  <div class="bg-gray-600 py-2">
-    {% for post in site.posts %}
-    <div class="px-4 mt-2 mb-3">
+  <div class="max-w-lg mx-auto">
+    {% for post in posts %}
+    <div class="bg-gray-600 py-2 px-4 mt-2 mb-3">
       <a href="{{post.url}}" class="text-md text-yellow-400 font-bold"><h3>{{ post.title }}</h3></a>
       <h4 class="text-sm text-gray-300">{{ post.subtitle }}</h4>
       <p class="text-sm text-blue-200">{{ post.date | date: "%d %B, %Y" }}</p>

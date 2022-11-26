@@ -1,8 +1,17 @@
 
 <nav class="bg-gray-600 text-white" role="navigation" aria-label="main navigation">
-  <div class="container mx-auto h-12 flex">
+  <div class="container mx-auto h-12 flex justify-between">
     <div class="">
       <a class="block px-3 pt-3 pb-2" href="{{ '/' | relative_url }}">Inicio</a>
+    </div>
+    <div class="order-last">
+    {% for item in site.data.navigation.languages %}
+    {% if item.language == page.lang %}
+    {% for link in item.links %}
+      <a class="block px-3 pt-3 pb-2" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
     </div>
   </div>
 </nav>

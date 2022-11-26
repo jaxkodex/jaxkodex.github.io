@@ -608,6 +608,10 @@ video {
   }
 }
 
+.order-last {
+  order: 9999;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -643,6 +647,22 @@ video {
 
 .h-12 {
   height: 3rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .bg-slate-500 {
