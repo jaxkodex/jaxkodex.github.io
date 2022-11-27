@@ -52,7 +52,7 @@
   }
 
   .post code {
-    @apply rounded-md p-1 text-xs bg-slate-800;
+    @apply rounded-md p-1 text-xs bg-slate-800 break-words;
     font-family: 'Raleway', sans-serif;
     font-family: 'Source Code Pro', monospace;
   }

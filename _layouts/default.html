@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
     <title>A developer's site</title>
+    <meta name="title" content="{{ page.title }}">
+    <meta name="description" content="{{ page.summary }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.summary }}">
+    <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="twitter:title" content="{{ page.title }}">
+    <meta property="twitter:description" content="{{ page.summary }}">
+    <meta property="twitter:image" content="{{ site.url }}{{ page.image }}">
     
+    <link rel="author" href="https://www.linkedin.com/in/jaxkodex"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Source+Code+Pro&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ '/assets/css/styles.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -20,7 +37,6 @@
 
         gtag('config', 'G-1MLXQT6KSW');
     </script>
-    </style>
   </head>
 <body class="bg-slate-500">
     {%- include header.html -%}

@@ -1,5 +1,6 @@
 #theme: jekyll-theme-minimal
 title: jaxkodex
+url: https://jaxkodex.github.io
 lang: en
 languages: ["en", "es"]
 plugins:
