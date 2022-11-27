@@ -4,11 +4,19 @@
 
 @layer base {
   .post p {
-    @apply mb-2 text-sm;
+    @apply mb-4 text-sm leading-loose;
+  }
+
+  .post h1 {
+    @apply mt-3 mb-2 font-bold text-blue-200;
   }
 
   .post h2 {
     @apply my-2 font-semibold text-blue-200;
+  }
+
+  .post h3 {
+    @apply my-2 font-bold;
   }
 
   .post img {
@@ -16,7 +24,11 @@
   }
 
   .post ul {
-    @apply list-disc ml-7;
+    @apply list-disc ml-7 mb-2;
+  }
+
+  .post ol {
+    @apply list-decimal ml-7 mb-2;
   }
 
   .post a {
@@ -37,5 +49,11 @@
 
   .post table tr td {
     @apply border border-slate-400;
+  }
+
+  .post code {
+    @apply rounded-md p-1 text-xs bg-slate-800;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Source Code Pro', monospace;
   }
 }

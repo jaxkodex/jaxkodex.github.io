@@ -2,7 +2,7 @@ languages:
 - language: "en"
   links:
   - title: "es"
-    url: /es/
+    url: /es.html
 - language: "es"
   links:
   - title: "en"
