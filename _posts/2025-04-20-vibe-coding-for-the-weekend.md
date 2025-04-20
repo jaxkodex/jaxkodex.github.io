@@ -5,7 +5,9 @@ subtitle: "¿Qué tan difícil es hacer una app en un fin de semana con IA?"
 summary: "[opinión] Con las herramientas actuales de generación de código, definitivamente se pueden hacer POCs en tiempo récord con el trade off de en el futuro necesitar hacer un refactor del código generado. El punto estará en cómo encontrar ese punto de equilibrio."
 image: /assets/images/markdown_v_html.PNG
 lang: es
-tags: opinión, ia
+categories:
+  - opinion
+  - ai
 ---
 
 # ¿Por qué todos están hablando de vibe coding?

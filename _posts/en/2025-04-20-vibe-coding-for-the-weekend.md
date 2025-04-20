@@ -4,8 +4,10 @@ title: "Vibe coding for the weekend"
 subtitle: "how hard can it be to create an app in the weekend with AI?"
 summary: "[opinion] Withe the current state of AI code agents, definitly creating a POC app can be done in a very short time. However the trade off is that in the future you might need to refactor all that code. The goal now will be to find the balance point where your project stops being a POC and needs a refactor."
 image: /assets/images/markdown_v_html.PNG
-lang: es
-tags: opinion, ia
+lang: en
+categories:
+  - opinion
+  - ai
 ---
 
 # Why is everybody talking about vibe coding?
