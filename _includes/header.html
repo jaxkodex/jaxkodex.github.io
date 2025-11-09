@@ -10,8 +10,10 @@
     <div class="flex items-center space-x-8">
       {% if page.lang == "es" %}
       <a class="text-gray-300 hover:text-white transition-colors" href="{{ '/acerca-de.html' | relative_url }}">Acerca de</a>
+      <a class="text-gray-300 hover:text-white transition-colors" href="{{ '/servicios.html' | relative_url }}">Servicios</a>
       {% else %}
       <a class="text-gray-300 hover:text-white transition-colors" href="{{ '/about.html' | relative_url }}">About</a>
+      <a class="text-gray-300 hover:text-white transition-colors" href="{{ '/services.html' | relative_url }}">Services</a>
       {% endif %}
       {% for item in site.data.navigation.languages %}
       {% if item.language == page.lang %}
