@@ -1,8 +1,9 @@
 ---
 layout: default
-title: "Acerca de | Jorge Vilca"
-summary: "Ingeniero de sistemas y gerente de ingeniería basado en Madrid, apasionado por construir soluciones tecnológicas de impacto."
+title: "Acerca de | Jorge Vilca - Engineering Manager y Arquitecto Backend Madrid"
+summary: "Engineering Manager y Arquitecto de Soluciones en Madrid, España. Especializado en desarrollo backend, infraestructura cloud y liderazgo técnico. Disponible para consultoría y colaboración."
 lang: es
+keywords: "engineering manager Madrid, arquitecto backend España, desarrollador Go, consultor Kubernetes, arquitecto soluciones Madrid, liderazgo técnico, consultor infraestructura cloud, ingeniero DevOps Madrid"
 ---
 
 <div class="container mx-auto px-6 py-16 max-w-4xl">
@@ -131,10 +132,13 @@ lang: es
 
     <!-- Contact -->
     <div class="border-t border-slate-700 pt-8">
-      <h2 class="text-3xl font-bold text-white mb-6">Conectemos</h2>
+      <h2 class="text-3xl font-bold text-white mb-6">Abierto a Colaboración</h2>
       <div class="text-gray-300 leading-relaxed space-y-4">
         <p>
-          Siempre estoy interesado en conectar con colegas tecnólogos, discutir desafíos interesantes o explorar oportunidades de colaboración.
+          Estoy disponible para consultoría, trabajo por contrato y colaboración en proyectos técnicos desafiantes. Ya sea que necesites un engineering manager, un arquitecto backend o servicios de asesoría técnica, siempre estoy interesado en conectar con colegas tecnólogos, discutir desafíos interesantes o explorar nuevas oportunidades.
+        </p>
+        <p class="text-lg font-semibold text-blue-400">
+          ¿Buscas un Engineering Manager o Arquitecto de Soluciones? <a href="{{ '/servicios.html' | relative_url }}" class="underline hover:text-blue-300">Ver mis servicios →</a>
         </p>
         <div class="flex flex-wrap gap-4 mt-6">
           <a href="https://www.linkedin.com/in/jaxkodex" target="_blank" rel="noopener noreferrer"

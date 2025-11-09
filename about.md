@@ -1,8 +1,9 @@
 ---
 layout: default
-title: "About | Jorge Vilca"
-summary: "Systems engineer and engineering manager based in Madrid, passionate about building impactful technology solutions."
+title: "About | Jorge Vilca - Engineering Manager & Backend Architect Madrid"
+summary: "Engineering Manager and Solutions Architect based in Madrid, Spain. Specialized in backend development, cloud infrastructure, and technical leadership. Available for consulting and collaboration."
 lang: en
+keywords: "engineering manager Madrid, backend architect Spain, Go developer, Kubernetes consultant, solutions architect Madrid, technical leadership, cloud infrastructure consultant, DevOps engineer Madrid"
 ---
 
 <div class="container mx-auto px-6 py-16 max-w-4xl">
@@ -131,10 +132,13 @@ lang: en
 
     <!-- Contact -->
     <div class="border-t border-slate-700 pt-8">
-      <h2 class="text-3xl font-bold text-white mb-6">Let's Connect</h2>
+      <h2 class="text-3xl font-bold text-white mb-6">Open to Collaboration</h2>
       <div class="text-gray-300 leading-relaxed space-y-4">
         <p>
-          I'm always interested in connecting with fellow technologists, discussing interesting challenges, or exploring collaboration opportunities.
+          I'm available for consulting, contract work, and collaboration on challenging technical projects. Whether you need an engineering manager, a backend architect, or technical advisory services, I'm always interested in connecting with fellow technologists, discussing interesting challenges, or exploring new opportunities.
+        </p>
+        <p class="text-lg font-semibold text-blue-400">
+          Looking for an Engineering Manager or Solutions Architect? <a href="{{ '/services.html' | relative_url }}" class="underline hover:text-blue-300">View my services →</a>
         </p>
         <div class="flex flex-wrap gap-4 mt-6">
           <a href="https://www.linkedin.com/in/jaxkodex" target="_blank" rel="noopener noreferrer"
