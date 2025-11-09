@@ -8,10 +8,11 @@
       <a class="text-lg font-semibold" href="{{ '/' | relative_url }}">Jorge Vilca</a>
     </div>
     <div class="flex items-center space-x-8">
-      <a class="text-gray-300 hover:text-white transition-colors" href="#projects">Projects</a>
-      <a class="text-gray-300 hover:text-white transition-colors" href="#about">About</a>
-      <a class="text-gray-300 hover:text-white transition-colors" href="#blog">Blog</a>
-      <a class="text-gray-300 hover:text-white transition-colors" href="#contact">Contact</a>
+      {% if page.lang == "es" %}
+      <a class="text-gray-300 hover:text-white transition-colors" href="{{ '/acerca-de.html' | relative_url }}">Acerca de</a>
+      {% else %}
+      <a class="text-gray-300 hover:text-white transition-colors" href="{{ '/about.html' | relative_url }}">About</a>
+      {% endif %}
       {% for item in site.data.navigation.languages %}
       {% if item.language == page.lang %}
       {% for link in item.links %}
