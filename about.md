@@ -7,19 +7,14 @@ keywords: "engineering manager Madrid, backend architect Spain, Go developer, Ku
 ---
 
 <div class="container mx-auto px-6 py-16 max-w-4xl">
-  <div class="bg-slate-800 rounded-lg shadow-xl p-8 md:p-12">
 
     <!-- Introduction -->
     <div class="mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">About Me</h1>
-      <div class="h-1 w-20 bg-blue-500 mb-8"></div>
 
       <div class="text-gray-300 text-lg leading-relaxed space-y-4">
         <p>
-          Hi! I'm Jorge Vilca, a systems engineer and engineering manager based in Madrid, with roots in Peru. I'm passionate about leveraging technology to build impactful solutions that make a real difference in people's lives and business operations.
-        </p>
-        <p>
-          Currently, I lead engineering teams while staying deeply connected to the technical challenges of modern software architecture, cloud infrastructure, and scalable backend systems. My journey has taken me from hands-on software development to technical leadership, and I continue to find excitement in both worlds.
+          Hi! I'm Jorge Vilca, a systems engineer and engineering manager based in Madrid, with roots in Peru. I'm passionate about leveraging technology to build impactful solutions that make a real difference in people's lives and businesses. Currently, I lead engineering teams while staying deeply connected to the technical challenges of modern software architecture, cloud infrastructure, and scalable backend systems. My journey has taken me from hands-on software development to technical leadership, and I continue to find excitement in both worlds.
         </p>
       </div>
     </div>
@@ -31,15 +26,13 @@ keywords: "engineering manager Madrid, backend architect Spain, Go developer, Ku
         <p>
           Throughout my career, I've had the privilege of working with innovative companies across different sectors:
         </p>
-        <ul class="list-disc list-inside space-y-2 ml-4">
-          <li><strong class="text-blue-400">Engineering Manager at Playtomic</strong> — Leading teams in building scalable solutions for the sports technology sector</li>
-          <li><strong class="text-blue-400">Interim Engineering Manager and Software Engineer at Glovo</strong> — Driving technical excellence in one of Europe's fastest-growing delivery platforms</li>
-          <li><strong class="text-blue-400">Solutions Architect at Rimac Seguros and Credicorp</strong> — Designing enterprise-grade systems for financial services and insurance</li>
-        </ul>
+        <p><strong class="text-white">Engineering Manager at Playtomic</strong> — Leading teams in building scalable solutions for the sports technology sector</p>
+        <p><strong class="text-white">Interim Engineering Manager and Software Engineer at Glovo</strong> — Driving technical excellence in one of Europe's fastest-growing delivery platforms</p>
+        <p><strong class="text-white">Solutions Architect at Rimac Seguros and Credicorp</strong> — Designing enterprise-grade systems for financial services and insurance</p>
         <p>
           My experience spans both the public and private sectors, where I've focused on:
         </p>
-        <ul class="list-disc list-inside space-y-2 ml-4">
+        <ul class="list-disc list-inside space-y-2 text-gray-300">
           <li>Leading engineering teams through complex technical challenges</li>
           <li>Designing and delivering scalable backend systems</li>
           <li>Building robust cloud infrastructure solutions</li>
@@ -51,50 +44,42 @@ keywords: "engineering manager Madrid, backend architect Spain, Go developer, Ku
     <!-- Technical Expertise -->
     <div class="mb-12">
       <h2 class="text-3xl font-bold text-white mb-6">Technical Expertise</h2>
-      <div class="text-gray-300 leading-relaxed space-y-4">
-        <p>
+      <div class="text-gray-300 leading-relaxed">
+        <p class="mb-6">
           I specialize in backend systems, DevOps, and cloud infrastructure with hands-on experience across the full technology stack:
         </p>
 
-        <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
           <div>
-            <h3 class="text-xl font-semibold text-blue-400 mb-3">Cloud & Infrastructure</h3>
-            <ul class="list-disc list-inside space-y-1 text-sm">
-              <li>AWS & Google Cloud Platform</li>
-              <li>Kubernetes & Docker</li>
-              <li>Terraform & Infrastructure as Code</li>
-              <li>Helm Charts & Container Orchestration</li>
-            </ul>
+            <h3 class="text-lg font-semibold text-white mb-2">Cloud & Infrastructure</h3>
+            <p class="text-gray-300 text-sm">AWS & Google Cloud Platform</p>
+            <p class="text-gray-300 text-sm">Kubernetes & Docker</p>
+            <p class="text-gray-300 text-sm">Terraform & Infrastructure as Code</p>
+            <p class="text-gray-300 text-sm">Helm Charts & Container Orchestration</p>
           </div>
 
           <div>
-            <h3 class="text-xl font-semibold text-blue-400 mb-3">Languages & Frameworks</h3>
-            <ul class="list-disc list-inside space-y-1 text-sm">
-              <li>Go, Python, TypeScript/JavaScript</li>
-              <li>Bash scripting & automation</li>
-              <li>SQL & database technologies</li>
-              <li>RESTful API design</li>
-            </ul>
+            <h3 class="text-lg font-semibold text-white mb-2">Languages & Frameworks</h3>
+            <p class="text-gray-300 text-sm">Go, Python, TypeScript/JavaScript</p>
+            <p class="text-gray-300 text-sm">Bash scripting & automation</p>
+            <p class="text-gray-300 text-sm">SQL & database technologies</p>
+            <p class="text-gray-300 text-sm">RESTful API design</p>
           </div>
 
           <div>
-            <h3 class="text-xl font-semibold text-blue-400 mb-3">Systems & Architecture</h3>
-            <ul class="list-disc list-inside space-y-1 text-sm">
-              <li>Scalable backend systems</li>
-              <li>Microservices architecture</li>
-              <li>ETL & data pipeline design</li>
-              <li>System integration patterns</li>
-            </ul>
+            <h3 class="text-lg font-semibold text-white mb-2">Systems & Architecture</h3>
+            <p class="text-gray-300 text-sm">Scalable backend systems</p>
+            <p class="text-gray-300 text-sm">Microservices architecture</p>
+            <p class="text-gray-300 text-sm">ETL & data pipeline design</p>
+            <p class="text-gray-300 text-sm">System integration patterns</p>
           </div>
 
           <div>
-            <h3 class="text-xl font-semibold text-blue-400 mb-3">Emerging Interests</h3>
-            <ul class="list-disc list-inside space-y-1 text-sm">
-              <li>AI/ML integration</li>
-              <li>Advanced database technologies</li>
-              <li>Platform engineering</li>
-              <li>Observability & monitoring</li>
-            </ul>
+            <h3 class="text-lg font-semibold text-white mb-2">Emerging Interests</h3>
+            <p class="text-gray-300 text-sm">AI/ML integration</p>
+            <p class="text-gray-300 text-sm">Advanced database technologies</p>
+            <p class="text-gray-300 text-sm">Platform engineering</p>
+            <p class="text-gray-300 text-sm">Observability & monitoring</p>
           </div>
         </div>
       </div>
@@ -107,13 +92,11 @@ keywords: "engineering manager Madrid, backend architect Spain, Go developer, Ku
         <p>
           When I'm not building software or leading teams, you'll find me:
         </p>
-        <ul class="list-disc list-inside space-y-2 ml-4">
-          <li><strong class="text-blue-400">Traveling</strong> — Exploring new cultures, cuisines, and perspectives around the world</li>
-          <li><strong class="text-blue-400">DIY Woodworking</strong> — Crafting furniture and home projects, finding zen in working with my hands</li>
-          <li><strong class="text-blue-400">Photography</strong> — Capturing moments and stories through the lens</li>
-          <li><strong class="text-blue-400">Reading</strong> — Diving into sci-fi worlds and literary fiction that challenges my thinking</li>
-          <li><strong class="text-blue-400">Continuous Learning</strong> — Pursuing knowledge in leadership development, AI/ML, and emerging technologies</li>
-        </ul>
+        <p><strong class="text-white">Traveling</strong> — Exploring new cultures, cuisines, and perspectives around the world</p>
+        <p><strong class="text-white">DIY Woodworking</strong> — Crafting furniture and home projects, finding zen in working with my hands</p>
+        <p><strong class="text-white">Photography</strong> — Capturing moments and stories through the lens</p>
+        <p><strong class="text-white">Reading</strong> — Diving into sci-fi worlds and literary fiction that challenges my thinking</p>
+        <p><strong class="text-white">Continuous Learning</strong> — Pursuing knowledge in leadership, development, AI/ML, and emerging technologies</p>
       </div>
     </div>
 
@@ -131,14 +114,11 @@ keywords: "engineering manager Madrid, backend architect Spain, Go developer, Ku
     </div>
 
     <!-- Contact -->
-    <div class="border-t border-slate-700 pt-8">
-      <h2 class="text-3xl font-bold text-white mb-6">Open to Collaboration</h2>
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-6">Let's Connect</h2>
       <div class="text-gray-300 leading-relaxed space-y-4">
         <p>
-          I'm available for consulting, contract work, and collaboration on challenging technical projects. Whether you need an engineering manager, a backend architect, or technical advisory services, I'm always interested in connecting with fellow technologists, discussing interesting challenges, or exploring new opportunities.
-        </p>
-        <p class="text-lg font-semibold text-blue-400">
-          Looking for an Engineering Manager or Solutions Architect? <a href="{{ '/services.html' | relative_url }}" class="underline hover:text-blue-300">View my services →</a>
+          I'm always interested in connecting with fellow technologists, discussing interesting challenges, or exploring collaboration opportunities.
         </p>
         <div class="flex flex-wrap gap-4 mt-6">
           <a href="https://www.linkedin.com/in/jaxkodex" target="_blank" rel="noopener noreferrer"
@@ -146,7 +126,7 @@ keywords: "engineering manager Madrid, backend architect Spain, Go developer, Ku
             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
-            LinkedIn
+            &nbsp;LinkedIn
           </a>
           <a href="https://github.com/jaxkodex" target="_blank" rel="noopener noreferrer"
              class="inline-flex items-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-colors">
@@ -159,5 +139,4 @@ keywords: "engineering manager Madrid, backend architect Spain, Go developer, Ku
       </div>
     </div>
 
-  </div>
 </div>

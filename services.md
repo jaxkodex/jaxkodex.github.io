@@ -6,18 +6,16 @@ lang: en
 ---
 
 <div class="container mx-auto px-6 py-16 max-w-4xl">
-  <div class="bg-slate-800 rounded-lg shadow-xl p-8 md:p-12">
 
     <!-- Hero Section -->
     <div class="mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Let's Build Something Great Together</h1>
-      <div class="h-1 w-20 bg-blue-500 mb-8"></div>
 
       <div class="text-gray-300 text-lg leading-relaxed space-y-4">
         <p>
           I'm available for consulting, contract work, and collaboration on challenging technical projects. With over a decade of experience leading engineering teams and building scalable backend systems, I can help your organization tackle complex technical challenges.
         </p>
-        <p class="text-xl font-semibold text-blue-400">
+        <p class="text-xl font-semibold text-white">
           Based in Madrid, Spain • Available for remote and on-site work
         </p>
       </div>
@@ -262,5 +260,5 @@ lang: en
       </div>
     </div>
 
-  </div>
+
 </div>

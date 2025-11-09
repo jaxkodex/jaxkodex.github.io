@@ -7,19 +7,14 @@ keywords: "engineering manager Madrid, arquitecto backend España, desarrollador
 ---
 
 <div class="container mx-auto px-6 py-16 max-w-4xl">
-  <div class="bg-slate-800 rounded-lg shadow-xl p-8 md:p-12">
 
     <!-- Introduction -->
     <div class="mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Acerca de Mí</h1>
-      <div class="h-1 w-20 bg-blue-500 mb-8"></div>
 
       <div class="text-gray-300 text-lg leading-relaxed space-y-4">
         <p>
-          ¡Hola! Soy Jorge Vilca, ingeniero de sistemas y gerente de ingeniería basado en Madrid, con raíces en Perú. Me apasiona aprovechar la tecnología para construir soluciones impactantes que marquen una diferencia real en la vida de las personas y las operaciones empresariales.
-        </p>
-        <p>
-          Actualmente, lidero equipos de ingeniería mientras mantengo una conexión profunda con los desafíos técnicos de la arquitectura de software moderna, la infraestructura en la nube y los sistemas backend escalables. Mi trayectoria me ha llevado desde el desarrollo de software práctico hasta el liderazgo técnico, y continúo encontrando entusiasmo en ambos mundos.
+          ¡Hola! Soy Jorge Vilca, ingeniero de sistemas y gerente de ingeniería basado en Madrid, con raíces en Perú. Me apasiona aprovechar la tecnología para construir soluciones impactantes que marquen una diferencia real en la vida de las personas y las empresas. Actualmente, lidero equipos de ingeniería mientras mantengo una conexión profunda con los desafíos técnicos de la arquitectura de software moderna, la infraestructura en la nube y los sistemas backend escalables. Mi trayectoria me ha llevado desde el desarrollo de software práctico hasta el liderazgo técnico, y continúo encontrando entusiasmo en ambos mundos.
         </p>
       </div>
     </div>
@@ -31,15 +26,13 @@ keywords: "engineering manager Madrid, arquitecto backend España, desarrollador
         <p>
           A lo largo de mi carrera, he tenido el privilegio de trabajar con empresas innovadoras en diferentes sectores:
         </p>
-        <ul class="list-disc list-inside space-y-2 ml-4">
-          <li><strong class="text-blue-400">Engineering Manager en Playtomic</strong> — Liderando equipos en la construcción de soluciones escalables para el sector de tecnología deportiva</li>
-          <li><strong class="text-blue-400">Interim Engineering Manager e Ingeniero de Software en Glovo</strong> — Impulsando la excelencia técnica en una de las plataformas de entrega de más rápido crecimiento en Europa</li>
-          <li><strong class="text-blue-400">Solutions Architect en Rimac Seguros y Credicorp</strong> — Diseñando sistemas de nivel empresarial para servicios financieros y seguros</li>
-        </ul>
+        <p><strong class="text-white">Engineering Manager en Playtomic</strong> — Liderando equipos en la construcción de soluciones escalables para el sector de tecnología deportiva</p>
+        <p><strong class="text-white">Interim Engineering Manager e Ingeniero de Software en Glovo</strong> — Impulsando la excelencia técnica en una de las plataformas de entrega de más rápido crecimiento en Europa</p>
+        <p><strong class="text-white">Solutions Architect en Rimac Seguros y Credicorp</strong> — Diseñando sistemas de nivel empresarial para servicios financieros y seguros</p>
         <p>
           Mi experiencia abarca tanto el sector público como el privado, donde me he enfocado en:
         </p>
-        <ul class="list-disc list-inside space-y-2 ml-4">
+        <ul class="list-disc list-inside space-y-2 text-gray-300">
           <li>Liderar equipos de ingeniería a través de desafíos técnicos complejos</li>
           <li>Diseñar y entregar sistemas backend escalables</li>
           <li>Construir soluciones robustas de infraestructura en la nube</li>
@@ -51,50 +44,42 @@ keywords: "engineering manager Madrid, arquitecto backend España, desarrollador
     <!-- Technical Expertise -->
     <div class="mb-12">
       <h2 class="text-3xl font-bold text-white mb-6">Experiencia Técnica</h2>
-      <div class="text-gray-300 leading-relaxed space-y-4">
-        <p>
+      <div class="text-gray-300 leading-relaxed">
+        <p class="mb-6">
           Me especializo en sistemas backend, DevOps e infraestructura en la nube con experiencia práctica en todo el stack tecnológico:
         </p>
 
-        <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
           <div>
-            <h3 class="text-xl font-semibold text-blue-400 mb-3">Cloud e Infraestructura</h3>
-            <ul class="list-disc list-inside space-y-1 text-sm">
-              <li>AWS & Google Cloud Platform</li>
-              <li>Kubernetes & Docker</li>
-              <li>Terraform & Infrastructure as Code</li>
-              <li>Helm Charts & Orquestación de Contenedores</li>
-            </ul>
+            <h3 class="text-lg font-semibold text-white mb-2">Cloud e Infraestructura</h3>
+            <p class="text-gray-300 text-sm">AWS & Google Cloud Platform</p>
+            <p class="text-gray-300 text-sm">Kubernetes & Docker</p>
+            <p class="text-gray-300 text-sm">Terraform & Infrastructure as Code</p>
+            <p class="text-gray-300 text-sm">Helm Charts & Orquestación de Contenedores</p>
           </div>
 
           <div>
-            <h3 class="text-xl font-semibold text-blue-400 mb-3">Lenguajes & Frameworks</h3>
-            <ul class="list-disc list-inside space-y-1 text-sm">
-              <li>Go, Python, TypeScript/JavaScript</li>
-              <li>Bash scripting & automatización</li>
-              <li>SQL & tecnologías de bases de datos</li>
-              <li>Diseño de APIs RESTful</li>
-            </ul>
+            <h3 class="text-lg font-semibold text-white mb-2">Lenguajes & Frameworks</h3>
+            <p class="text-gray-300 text-sm">Go, Python, TypeScript/JavaScript</p>
+            <p class="text-gray-300 text-sm">Bash scripting & automatización</p>
+            <p class="text-gray-300 text-sm">SQL & tecnologías de bases de datos</p>
+            <p class="text-gray-300 text-sm">Diseño de APIs RESTful</p>
           </div>
 
           <div>
-            <h3 class="text-xl font-semibold text-blue-400 mb-3">Sistemas & Arquitectura</h3>
-            <ul class="list-disc list-inside space-y-1 text-sm">
-              <li>Sistemas backend escalables</li>
-              <li>Arquitectura de microservicios</li>
-              <li>Diseño de ETL & pipelines de datos</li>
-              <li>Patrones de integración de sistemas</li>
-            </ul>
+            <h3 class="text-lg font-semibold text-white mb-2">Sistemas & Arquitectura</h3>
+            <p class="text-gray-300 text-sm">Sistemas backend escalables</p>
+            <p class="text-gray-300 text-sm">Arquitectura de microservicios</p>
+            <p class="text-gray-300 text-sm">Diseño de ETL & pipelines de datos</p>
+            <p class="text-gray-300 text-sm">Patrones de integración de sistemas</p>
           </div>
 
           <div>
-            <h3 class="text-xl font-semibold text-blue-400 mb-3">Intereses Emergentes</h3>
-            <ul class="list-disc list-inside space-y-1 text-sm">
-              <li>Integración de AI/ML</li>
-              <li>Tecnologías avanzadas de bases de datos</li>
-              <li>Platform engineering</li>
-              <li>Observabilidad & monitoreo</li>
-            </ul>
+            <h3 class="text-lg font-semibold text-white mb-2">Intereses Emergentes</h3>
+            <p class="text-gray-300 text-sm">Integración de AI/ML</p>
+            <p class="text-gray-300 text-sm">Tecnologías avanzadas de bases de datos</p>
+            <p class="text-gray-300 text-sm">Platform engineering</p>
+            <p class="text-gray-300 text-sm">Observabilidad & monitoreo</p>
           </div>
         </div>
       </div>
@@ -107,13 +92,11 @@ keywords: "engineering manager Madrid, arquitecto backend España, desarrollador
         <p>
           Cuando no estoy construyendo software o liderando equipos, me encontrarás:
         </p>
-        <ul class="list-disc list-inside space-y-2 ml-4">
-          <li><strong class="text-blue-400">Viajando</strong> — Explorando nuevas culturas, gastronomías y perspectivas alrededor del mundo</li>
-          <li><strong class="text-blue-400">Carpintería DIY</strong> — Fabricando muebles y proyectos para el hogar, encontrando paz trabajando con mis manos</li>
-          <li><strong class="text-blue-400">Fotografía</strong> — Capturando momentos e historias a través del lente</li>
-          <li><strong class="text-blue-400">Lectura</strong> — Sumergiéndome en mundos de ciencia ficción y literatura que desafían mi pensamiento</li>
-          <li><strong class="text-blue-400">Aprendizaje Continuo</strong> — Buscando conocimiento en desarrollo de liderazgo, AI/ML y tecnologías emergentes</li>
-        </ul>
+        <p><strong class="text-white">Viajando</strong> — Explorando nuevas culturas, gastronomías y perspectivas alrededor del mundo</p>
+        <p><strong class="text-white">Carpintería DIY</strong> — Fabricando muebles y proyectos para el hogar, encontrando paz trabajando con mis manos</p>
+        <p><strong class="text-white">Fotografía</strong> — Capturando momentos e historias a través del lente</p>
+        <p><strong class="text-white">Lectura</strong> — Sumergiéndome en mundos de ciencia ficción y literatura que desafían mi pensamiento</p>
+        <p><strong class="text-white">Aprendizaje Continuo</strong> — Buscando conocimiento en liderazgo, desarrollo, AI/ML y tecnologías emergentes</p>
       </div>
     </div>
 
@@ -131,14 +114,11 @@ keywords: "engineering manager Madrid, arquitecto backend España, desarrollador
     </div>
 
     <!-- Contact -->
-    <div class="border-t border-slate-700 pt-8">
-      <h2 class="text-3xl font-bold text-white mb-6">Abierto a Colaboración</h2>
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-white mb-6">Conectemos</h2>
       <div class="text-gray-300 leading-relaxed space-y-4">
         <p>
-          Estoy disponible para consultoría, trabajo por contrato y colaboración en proyectos técnicos desafiantes. Ya sea que necesites un engineering manager, un arquitecto backend o servicios de asesoría técnica, siempre estoy interesado en conectar con colegas tecnólogos, discutir desafíos interesantes o explorar nuevas oportunidades.
-        </p>
-        <p class="text-lg font-semibold text-blue-400">
-          ¿Buscas un Engineering Manager o Arquitecto de Soluciones? <a href="{{ '/servicios.html' | relative_url }}" class="underline hover:text-blue-300">Ver mis servicios →</a>
+          Siempre estoy interesado en conectar con colegas tecnólogos, discutir desafíos interesantes o explorar oportunidades de colaboración.
         </p>
         <div class="flex flex-wrap gap-4 mt-6">
           <a href="https://www.linkedin.com/in/jaxkodex" target="_blank" rel="noopener noreferrer"
@@ -159,5 +139,4 @@ keywords: "engineering manager Madrid, arquitecto backend España, desarrollador
       </div>
     </div>
 
-  </div>
 </div>
