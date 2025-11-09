@@ -4,56 +4,63 @@
 
 @layer base {
   .post p {
-    @apply mb-4 text-sm leading-loose;
+    @apply mb-5 text-base leading-relaxed text-gray-300;
   }
 
   .post h1 {
-    @apply mt-3 mb-2 font-bold text-blue-200;
+    @apply mt-8 mb-4 text-3xl font-bold text-white;
   }
 
   .post h2 {
-    @apply my-2 font-semibold text-blue-200;
+    @apply mt-6 mb-3 text-2xl font-semibold text-white;
   }
 
   .post h3 {
-    @apply my-2 font-bold;
+    @apply mt-4 mb-2 text-xl font-bold text-gray-200;
   }
 
   .post img {
-    @apply mx-auto;
+    @apply mx-auto my-6 rounded-lg;
   }
 
   .post ul {
-    @apply list-disc ml-7 mb-2;
+    @apply list-disc ml-7 mb-4 text-gray-300;
   }
 
   .post ol {
-    @apply list-decimal ml-7 mb-2;
+    @apply list-decimal ml-7 mb-4 text-gray-300;
   }
 
   .post a {
-    @apply text-blue-400 underline;
+    @apply text-blue-500 hover:text-blue-400 underline transition-colors;
   }
 
   .post table {
-    @apply mx-auto table-auto rounded-t-lg;
+    @apply mx-auto table-auto rounded-lg my-6;
   }
 
   .post table thead {
-    @apply  rounded-t-lg border border-slate-400 overflow-hidden;
+    @apply rounded-t-lg border border-slate-600 overflow-hidden bg-slate-700;
   }
 
   .post table tr th, .post table tr td {
-    @apply px-3 py-2 text-center;
+    @apply px-4 py-3 text-center;
   }
 
   .post table tr td {
-    @apply border border-slate-400;
+    @apply border border-slate-600;
   }
 
   .post code {
-    @apply rounded-md p-1 text-xs bg-slate-800 break-words;
-    font-family: 'Raleway', sans-serif;
+    @apply rounded-md px-2 py-1 text-sm bg-slate-900 text-blue-300 break-words;
     font-family: 'Source Code Pro', monospace;
+  }
+
+  .post pre {
+    @apply bg-slate-900 rounded-lg p-4 overflow-x-auto my-4;
+  }
+
+  .post pre code {
+    @apply bg-transparent p-0;
   }
 }

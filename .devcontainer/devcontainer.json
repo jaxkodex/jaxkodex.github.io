@@ -3,19 +3,32 @@
 {
 	"name": "Jekyll",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm"
+	"image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
+
+		// Mount local .claude folder to container home directory for persistence
+	"mounts": [
+		"source=jaxkodex-github-io-claude,target=/home/vscode/.claude,type=volume"
+	],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {}
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Uncomment the next line to run commands after the container is created.
-	// "postCreateCommand": "jekyll --version"
+	"postCreateCommand": "sudo chown -R vscode:vscode /home/vscode/.claude && . ${NVM_DIR}/nvm.sh && npm install -g @anthropic-ai/claude-code",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Anthropic.claude-code"
+			]
+		}
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"

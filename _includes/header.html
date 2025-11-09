@@ -1,17 +1,24 @@
 
-<nav class="bg-gray-600 text-white" role="navigation" aria-label="main navigation">
-  <div class="container mx-auto h-12 flex justify-between">
-    <div class="">
-      <a class="block px-3 pt-3 pb-2" href="{{ '/' | relative_url }}">Inicio</a>
+<nav class="bg-slate-900 text-white" role="navigation" aria-label="main navigation">
+  <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/>
+      </svg>
+      <a class="text-lg font-semibold" href="{{ '/' | relative_url }}">Jorge Vilca</a>
     </div>
-    <div class="order-last">
-    {% for item in site.data.navigation.languages %}
-    {% if item.language == page.lang %}
-    {% for link in item.links %}
-      <a class="block px-3 pt-3 pb-2" href="{{ link.url | relative_url }}">{{ link.title }}</a>
-    {% endfor %}
-    {% endif %}
-    {% endfor %}
+    <div class="flex items-center space-x-8">
+      <a class="text-gray-300 hover:text-white transition-colors" href="#projects">Projects</a>
+      <a class="text-gray-300 hover:text-white transition-colors" href="#about">About</a>
+      <a class="text-gray-300 hover:text-white transition-colors" href="#blog">Blog</a>
+      <a class="text-gray-300 hover:text-white transition-colors" href="#contact">Contact</a>
+      {% for item in site.data.navigation.languages %}
+      {% if item.language == page.lang %}
+      {% for link in item.links %}
+      <a class="text-gray-300 hover:text-white transition-colors text-sm" href="{{ link.url | relative_url }}">{{ link.title | upcase }}</a>
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </nav>
