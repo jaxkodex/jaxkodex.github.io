@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Servicios y Colaboración | Jorge Vilca"
-summary: "Consultoría en gestión de ingeniería, arquitectura backend e infraestructura cloud. Disponible para consultoría, trabajo por contrato y roles de liderazgo técnico en Madrid y remoto."
+summary: "Consultoría en gestión de ingeniería, arquitectura backend e infraestructura cloud. Disponible en Madrid y remoto."
 lang: es
 ---
 

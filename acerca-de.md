@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Acerca de Jorge Vilca | Engineering Manager Madrid"
-summary: "Engineering Manager y Arquitecto de Soluciones en Madrid, España. Especializado en desarrollo backend, infraestructura cloud y liderazgo técnico. Disponible para consultoría y colaboración."
+summary: "Engineering Manager y Arquitecto de Soluciones en Madrid. Experto en sistemas backend, infraestructura cloud y liderazgo técnico."
 lang: es
 keywords: "engineering manager Madrid, arquitecto backend España, desarrollador Go, consultor Kubernetes, arquitecto soluciones Madrid, liderazgo técnico, consultor infraestructura cloud, ingeniero DevOps Madrid"
 ---

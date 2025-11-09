@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Services & Collaboration | Jorge Vilca"
-summary: "Engineering management consulting, backend architecture, and cloud infrastructure services. Available for consulting, contract work, and technical leadership roles in Madrid and remote."
+summary: "Engineering management consulting, backend architecture, and cloud infrastructure services. Available in Madrid and remote."
 lang: en
 ---
 
