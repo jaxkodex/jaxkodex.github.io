@@ -4,70 +4,76 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Jekyll-based personal blog and portfolio site hosted on GitHub Pages. The site features a bilingual interface (English and Spanish) with blog posts written in Markdown, styled using Tailwind CSS.
+This is a Jekyll-based personal blog and portfolio site hosted on GitHub Pages. The site features a bilingual interface (English and Spanish) with blog posts written in Markdown, styled using Tailwind CSS. The homepage is a single-page landing with anchor-linked sections (hero, works, craftsmanship, blog, contact).
 
 ## Build and Development Commands
 
 ### Jekyll Site (Ruby)
 ```bash
-# Install Ruby dependencies
-bundle install
-
-# Start Jekyll development server (default port 4000)
-bundle exec jekyll serve
-
-# Build the static site
-bundle exec jekyll build
+bundle install               # Install Ruby dependencies
+bundle exec jekyll serve     # Start dev server (port 4000)
+bundle exec jekyll build     # Build static site to _site/
 ```
 
 ### Tailwind CSS (Node.js)
 ```bash
-# Install Node dependencies
-npm install
-
-# Development mode (watch for changes)
-npm run dev
-
-# Production build (minified CSS)
-npm run prod
+npm install                  # Install Node dependencies
+npm run dev                  # Watch mode (rebuilds on file changes)
+npm run prod                 # Production build (minified)
 ```
 
 ### Combined Development Workflow
-Run both Jekyll and Tailwind in separate terminals:
-1. Terminal 1: `bundle exec jekyll serve`
-2. Terminal 2: `npm run dev`
+Run both in separate terminals:
+1. `bundle exec jekyll serve`
+2. `npm run dev`
 
 ## Architecture and Structure
 
+### Layouts Hierarchy
+
+- `default.html`: Base layout — SEO meta tags, Google Fonts (Raleway, Space Grotesk, Source Code Pro), Google Analytics, structured data, includes header/footer
+- `landing.html`: Extends default — single-page homepage with section includes (hero, works, craftsmanship, blog)
+- `post.html`: Extends default — individual blog post with `.post` typography class
+- `page.html`: Extends default — generic content pages (about, services)
+- `home.html`: Legacy layout (replaced by `landing.html` for homepages)
+
+### Landing Page Sections (`_includes/landing/`)
+
+The homepage is composed of four section includes, each with bilingual support via `{% if page.lang == "es" %}{% endif %}` conditionals:
+
+- `hero.html`: Large name typography, subtitle, tech badges, CSS-animated scrolling ticker
+- `works.html`: Portfolio grid loaded from `_data/works.yml` or `_data/works_es.yml`
+- `craftsmanship.html`: Services section with numbered items (01-03)
+- `blog.html`: Recent posts filtered by `site.posts | where:"lang", page.lang`
+
 ### Multilingual Content Organization
 
-The site implements a custom multilingual architecture without using jekyll-multiple-languages-plugin:
+Custom bilingual architecture without plugins:
 
-- **Root-level pages**: Language-specific index pages (`index.md` for English, `es.md` for Spanish)
-- **Blog posts**: Organized by language using `lang` front matter and directory structure:
-  - Spanish posts: `_posts/YYYY-MM-DD-title.md` (lang: es)
-  - English posts: `_posts/en/YYYY-MM-DD-title.md` (lang: en)
-- **Navigation**: Language switcher configured in `_data/navigation.yml`
-- **Post filtering**: The `home.html` layout filters posts using: `{% assign posts=site.posts | where:"lang", page.lang %}`
+- **Homepages**: `index.md` (English, layout: landing), `es.md` (Spanish, layout: landing)
+- **Blog posts**: `_posts/YYYY-MM-DD-title.md` (lang: es), `_posts/en/YYYY-MM-DD-title.md` (lang: en)
+- **Pages**: Parallel files — `about.md`/`acerca-de.md`, `services.md`/`servicios.md`
+- **Navigation**: Language switcher in `_data/navigation.yml`
+- **Data files**: Parallel YAML files — `_data/works.yml`/`_data/works_es.yml`
+- **Post filtering**: `{% assign posts = site.posts | where:"lang", page.lang %}`
+
+### Design System
+
+- **Background**: Pure black (`bg-black`) with `bg-gray-950`/`bg-gray-900` for cards
+- **Accent color**: Lime/chartreuse (`lime-400` for highlights, `lime-300` for hover)
+- **Fonts**: Space Grotesk (`font-display`) for headings, Raleway (`font-sans`) for body, Source Code Pro for code
+- **Borders**: `border-gray-800` subtle borders on cards and sections
+- **Navigation**: Fixed sticky header with `bg-black/80 backdrop-blur-md`
 
 ### Tailwind CSS Integration
 
-Tailwind is integrated with Jekyll using a custom build process:
-
-- **Input**: `src/input.css` contains Tailwind directives and custom layer styles
-- **Output**: `assets/css/styles.css` (generated, not committed)
-- **Post styles**: Custom typography styles defined in `@layer base` for the `.post` class
-- **Content paths**: Configured in `tailwind.config.js` to scan `_layouts/**/*.html` and `_includes/**/*.html`
-
-### Jekyll Layouts Hierarchy
-
-- `default.html`: Base layout with meta tags, Google Analytics, and includes header/footer
-- `home.html`: Extends default, displays filtered list of posts by language
-- `post.html`: Extends default, renders individual blog post content
+- **Input**: `src/input.css` — Tailwind directives, `.post` typography styles, ticker utility
+- **Output**: `assets/css/styles.css` (generated, do not edit directly)
+- **Config**: `tailwind.config.js` — font families (sans, display), scroll animation keyframes, custom slate-750 color
+- **Content paths**: Scans `_layouts/`, `_includes/`, root `.md` files, and `_posts/`
 
 ### Front Matter Requirements for Posts
 
-All blog posts must include:
 ```yaml
 ---
 layout: post
@@ -78,36 +84,27 @@ image: /assets/images/image.png  # For social media cards
 lang: en  # or 'es'
 categories:
   - category1
-  - category2
 ---
 ```
 
-## Important Configuration Files
+## Key Data Files
 
-- `_config.yml`: Site-wide Jekyll configuration including plugins (jekyll-sitemap)
-- `_data/navigation.yml`: Language switcher links configuration
-- `tailwind.config.js`: Tailwind content paths and custom font family (Raleway)
-- `.devcontainer/devcontainer.json`: DevContainer setup with Jekyll, Node.js, and Claude Code
+- `_data/works.yml` / `_data/works_es.yml`: Portfolio projects (id, title, subtitle, description, year, gradient, tags)
+- `_data/navigation.yml`: Language switcher links
+- `_config.yml`: Site config — title, url, languages, plugins (jekyll-sitemap)
 
 ## Creating New Blog Posts
 
-1. Create a new file in the appropriate directory:
-   - Spanish: `_posts/YYYY-MM-DD-slug.md`
-   - English: `_posts/en/YYYY-MM-DD-slug.md`
+1. Create file: `_posts/YYYY-MM-DD-slug.md` (Spanish) or `_posts/en/YYYY-MM-DD-slug.md` (English)
 2. Add required front matter (see template above)
 3. Write content in Markdown
-4. Images should be placed in `assets/images/` directory
-5. Jekyll will automatically generate the post URL as `/YYYY/MM/DD/slug.html`
+4. Place images in `assets/images/` directory
+5. Rebuild Tailwind CSS if new utility classes are used
 
 ## Styling Blog Post Content
 
-Custom post styles are defined in [src/input.css](src/input.css) using Tailwind's `@layer base` directive. The `.post` class provides consistent typography for:
-- Paragraphs, headings (h1-h3)
-- Lists (ul, ol)
-- Links, images
-- Tables with borders
-- Inline code blocks with syntax highlighting background
+Custom post styles are defined in `src/input.css` using Tailwind's `@layer base` directive. The `.post` class provides consistent typography for paragraphs, headings (h1-h3), lists, links, images, tables, and code blocks.
 
 ## Git Hooks
 
-Husky is configured but the pre-commit hook is currently minimal. The hook infrastructure is in place at `.husky/pre-commit`.
+Husky is configured with a minimal pre-commit hook at `.husky/pre-commit`.

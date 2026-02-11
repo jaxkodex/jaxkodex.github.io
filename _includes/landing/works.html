@@ -1,0 +1,85 @@
+<!-- Selected Works Section -->
+{% if page.lang == "es" %}
+  {% assign works = site.data.works_es %}
+{% else %}
+  {% assign works = site.data.works %}
+{% endif %}
+
+<section id="works" class="py-24 lg:py-32 relative">
+  <div class="container mx-auto px-6 lg:px-12">
+
+    <!-- Section Header -->
+    <div class="flex items-end justify-between mb-16">
+      <h2 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white leading-none">
+        {% if page.lang == "es" %}Selected<br>Works{% else %}Selected<br>Works{% endif %}
+      </h2>
+      <a href="#" class="hidden sm:inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-gray-400 hover:text-lime-400 transition-colors group">
+        {% if page.lang == "es" %}Ver todos los proyectos{% else %}View all projects{% endif %}
+        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0-6.75-6.75M19.5 12l-6.75 6.75"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Works Grid: Large card left, two stacked right -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+      {% for work in works %}
+      {% if forloop.first %}
+      <!-- Featured / Large Card -->
+      <div class="group relative rounded-2xl overflow-hidden border border-gray-800/60 bg-gray-950 hover:border-gray-700 transition-all duration-500 lg:row-span-2">
+        <!-- Gradient placeholder image -->
+        <div class="aspect-[4/3] lg:aspect-auto lg:h-72 w-full bg-gradient-to-br {{ work.gradient }} relative overflow-hidden">
+          <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(255,255,255,0.04),transparent_70%)]"></div>
+          <!-- Noise texture -->
+          <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+        </div>
+        <div class="p-6 lg:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-lime-400 text-xs font-display font-semibold tracking-wider">{{ work.subtitle }}</span>
+            <span class="text-gray-600 text-xs">{{ work.year }}</span>
+          </div>
+          <h3 class="font-display font-bold text-2xl lg:text-3xl text-white mb-3 group-hover:text-lime-400 transition-colors">{{ work.title }}</h3>
+          <p class="text-gray-400 text-sm leading-relaxed line-clamp-3">{{ work.description }}</p>
+          <div class="flex flex-wrap gap-2 mt-5">
+            {% for tag in work.tags %}
+            <span class="text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full border border-gray-800 text-gray-500">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      {% else %}
+      <!-- Smaller stacked cards -->
+      <div class="group relative rounded-2xl overflow-hidden border border-gray-800/60 bg-gray-950 hover:border-gray-700 transition-all duration-500 flex flex-col sm:flex-row lg:flex-row">
+        <!-- Gradient placeholder image -->
+        <div class="aspect-video sm:aspect-auto sm:w-56 lg:w-64 shrink-0 bg-gradient-to-br {{ work.gradient }} relative overflow-hidden">
+          <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_40%,rgba(255,255,255,0.04),transparent_70%)]"></div>
+          <div class="absolute inset-0 opacity-20" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+        </div>
+        <div class="p-5 lg:p-6 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-lime-400 text-xs font-display font-semibold tracking-wider">{{ work.subtitle }}</span>
+            <span class="text-gray-600 text-xs">{{ work.year }}</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-2 group-hover:text-lime-400 transition-colors">{{ work.title }}</h3>
+          <p class="text-gray-400 text-sm leading-relaxed line-clamp-2">{{ work.description }}</p>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+
+    </div>
+
+    <!-- Mobile "View all" link -->
+    <div class="sm:hidden mt-8 text-center">
+      <a href="#" class="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-gray-400 hover:text-lime-400 transition-colors">
+        {% if page.lang == "es" %}Ver todos los proyectos{% else %}View all projects{% endif %}
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0-6.75-6.75M19.5 12l-6.75 6.75"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>

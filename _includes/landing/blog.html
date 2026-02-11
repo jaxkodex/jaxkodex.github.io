@@ -1,0 +1,77 @@
+<!-- Engineering Logs Section -->
+{% assign posts = site.posts | where: "lang", page.lang %}
+
+<section id="blog" class="py-24 lg:py-32 relative">
+
+  <!-- Top border accent -->
+  <div class="absolute top-0 left-6 lg:left-12 right-6 lg:right-12 h-px bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800"></div>
+
+  <div class="container mx-auto px-6 lg:px-12">
+
+    <!-- Section Header -->
+    <div class="mb-16">
+      <h2 class="font-display font-bold text-4xl sm:text-5xl text-white mb-4">
+        {% if page.lang == "es" %}Engineering Logs{% else %}Engineering Logs{% endif %}
+      </h2>
+      <p class="text-gray-500 text-base max-w-xl">
+        {% if page.lang == "es" %}
+        Artículos sobre arquitectura, liderazgo técnico, patrones de diseño y las herramientas que uso en el día a día.
+        {% else %}
+        Posts on architecture, technical leadership, design patterns, and the tools I use day to day.
+        {% endif %}
+      </p>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
+
+      {% for post in posts limit:2 %}
+      <a href="{{ post.url }}" class="group block rounded-2xl border border-gray-800/60 bg-gray-950 hover:border-gray-700 overflow-hidden transition-all duration-300">
+        <div class="p-6 lg:p-8">
+          <!-- Categories -->
+          <div class="flex flex-wrap gap-2 mb-5">
+            {% for cat in post.categories %}
+            <span class="text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full border border-gray-800 text-gray-500">{{ cat }}</span>
+            {% endfor %}
+          </div>
+
+          <!-- Title -->
+          <h3 class="font-display font-bold text-xl lg:text-2xl text-white mb-3 group-hover:text-lime-400 transition-colors leading-snug">
+            {{ post.title }}
+          </h3>
+
+          <!-- Summary -->
+          <p class="text-gray-400 text-sm leading-relaxed line-clamp-3 mb-6">
+            {{ post.summary }}
+          </p>
+
+          <!-- Meta -->
+          <div class="flex items-center justify-between pt-5 border-t border-gray-800/60">
+            <span class="text-xs text-gray-600">{{ post.date | date: "%b %d, %Y" }}</span>
+            <span class="text-xs text-gray-500 group-hover:text-lime-400 transition-colors inline-flex items-center gap-1.5">
+              {% if page.lang == "es" %}Leer{% else %}Read{% endif %}
+              <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0-6.75-6.75M19.5 12l-6.75 6.75"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+
+    <!-- See All Link -->
+    {% if posts.size > 2 %}
+    <div class="text-center">
+      <a href="#" class="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-gray-400 hover:text-lime-400 transition-colors group">
+        {% if page.lang == "es" %}Ver todos{% else %}See all{% endif %}
+        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0-6.75-6.75M19.5 12l-6.75 6.75"/>
+        </svg>
+      </a>
+    </div>
+    {% endif %}
+
+  </div>
+</section>

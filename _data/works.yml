@@ -1,0 +1,26 @@
+- id: nexus-cloud
+  title: "Nexus Cloud"
+  subtitle: "SAAS, MULTI-TENANT, AWS"
+  description: "Architected a scalable multi-tenant cloud platform serving enterprise clients, built on AWS with Kubernetes orchestration and Go microservices powering a modern distributed system."
+  year: 2024
+  gradient: "from-cyan-900/40 to-blue-900/40"
+  tags: ["AWS", "Kubernetes", "Go", "Terraform"]
+  featured: true
+
+- id: vibe-coding-ai
+  title: "Vibe Coding AI"
+  subtitle: "AI, DEVELOPER TOOLS, PYTHON"
+  description: "Built an AI-powered development assistant that leverages large language models to generate production-ready code and accelerate engineering workflows."
+  year: 2025
+  gradient: "from-amber-900/40 to-yellow-900/40"
+  tags: ["AI/ML", "Python", "TypeScript"]
+  featured: true
+
+- id: go-shortener
+  title: "Go Shortener"
+  subtitle: "GO, AWS, SERVERLESS"
+  description: "High-performance URL shortener built with Go, deployed on AWS using S3 and CloudFront for globally distributed, low-latency redirects."
+  year: 2022
+  gradient: "from-emerald-900/40 to-green-900/40"
+  tags: ["Go", "AWS", "S3", "CloudFront"]
+  featured: true

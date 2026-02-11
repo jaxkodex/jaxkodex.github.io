@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: landing
 title: "Jorge Vilca - Engineering Manager Madrid | Blog Tech"
 lang: es
 summary: "Engineering Manager en Madrid. Artículos sobre desarrollo backend, infraestructura cloud, Kubernetes, Go, Python y liderazgo técnico."

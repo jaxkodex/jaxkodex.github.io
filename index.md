@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: landing
 title: "Jorge Vilca - Engineering Manager & Backend Architect | Tech Blog"
 lang: en
 summary: "Engineering Manager in Madrid sharing insights on backend development, cloud infrastructure, Kubernetes, Go, Python, and tech leadership."

@@ -1,27 +1,127 @@
 
-<nav class="bg-slate-900 text-white" role="navigation" aria-label="main navigation">
-  <div class="container mx-auto px-6 py-5 flex justify-between items-center">
-    <div class="flex items-center space-x-2">
-      <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"/>
-      </svg>
-      <a class="text-lg font-semibold" href="{{ '/' | relative_url }}">Jorge Vilca</a>
-    </div>
-    <div class="flex items-center space-x-8">
-      {% if page.lang == "es" %}
-      <a class="text-gray-300 hover:text-white transition-colors" href="{{ '/acerca-de.html' | relative_url }}">Acerca de</a>
-      <a class="text-gray-300 hover:text-white transition-colors" href="{{ '/servicios.html' | relative_url }}">Servicios</a>
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800/50 text-white" role="navigation" aria-label="main navigation">
+  <div class="container mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
+    <a class="font-display font-bold text-lg tracking-tight" href="{{ '/' | relative_url }}">
+      <span class="text-lime-400">//</span> JAXKODEX
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-8">
+      {% if page.layout == "landing" %}
+        {% if page.lang == "es" %}
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="#about">Acerca de</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="#craftsmanship">Servicios</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="#works">Proyectos</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="#blog">Insights</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="#contact">Contacto</a>
+        {% else %}
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="#about">About</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="#craftsmanship">Services</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="#works">Works</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="#blog">Insights</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="#contact">Contact</a>
+        {% endif %}
       {% else %}
-      <a class="text-gray-300 hover:text-white transition-colors" href="{{ '/about.html' | relative_url }}">About</a>
-      <a class="text-gray-300 hover:text-white transition-colors" href="{{ '/services.html' | relative_url }}">Services</a>
+        {% if page.lang == "es" %}
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="{{ '/' | relative_url }}#about">Acerca de</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="{{ '/' | relative_url }}#craftsmanship">Servicios</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="{{ '/' | relative_url }}#works">Proyectos</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="{{ '/' | relative_url }}#blog">Insights</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="{{ '/' | relative_url }}#contact">Contacto</a>
+        {% else %}
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="{{ '/' | relative_url }}#about">About</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="{{ '/' | relative_url }}#craftsmanship">Services</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="{{ '/' | relative_url }}#works">Works</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="{{ '/' | relative_url }}#blog">Insights</a>
+        <a class="text-sm text-gray-400 hover:text-white transition-colors" href="{{ '/' | relative_url }}#contact">Contact</a>
+        {% endif %}
       {% endif %}
+
+      <!-- Language Switcher -->
       {% for item in site.data.navigation.languages %}
       {% if item.language == page.lang %}
       {% for link in item.links %}
-      <a class="text-gray-300 hover:text-white transition-colors text-sm" href="{{ link.url | relative_url }}">{{ link.title | upcase }}</a>
+      <a class="text-sm text-gray-500 hover:text-white transition-colors uppercase border-l border-gray-800 pl-6" href="{{ link.url | relative_url }}">{{ link.title | upcase }}</a>
       {% endfor %}
       {% endif %}
       {% endfor %}
+
+      <!-- Hire Me CTA -->
+      <a href="#contact" class="bg-lime-400 hover:bg-lime-300 text-black font-display font-bold text-xs uppercase tracking-[0.1em] px-5 py-2.5 rounded-lg transition-colors">
+        {% if page.lang == "es" %}Contrátame{% else %}Hire Me{% endif %}
+      </a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white transition-colors" aria-label="Toggle menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800/50 bg-black/95 backdrop-blur-md">
+    <div class="container mx-auto px-6 py-6 flex flex-col gap-4">
+      {% if page.layout == "landing" %}
+        {% if page.lang == "es" %}
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="#about">Acerca de</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="#craftsmanship">Servicios</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="#works">Proyectos</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="#blog">Insights</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="#contact">Contacto</a>
+        {% else %}
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="#about">About</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="#craftsmanship">Services</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="#works">Works</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="#blog">Insights</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="#contact">Contact</a>
+        {% endif %}
+      {% else %}
+        {% if page.lang == "es" %}
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="{{ '/' | relative_url }}#about">Acerca de</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="{{ '/' | relative_url }}#craftsmanship">Servicios</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="{{ '/' | relative_url }}#works">Proyectos</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="{{ '/' | relative_url }}#blog">Insights</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="{{ '/' | relative_url }}#contact">Contacto</a>
+        {% else %}
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="{{ '/' | relative_url }}#about">About</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="{{ '/' | relative_url }}#craftsmanship">Services</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="{{ '/' | relative_url }}#works">Works</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="{{ '/' | relative_url }}#blog">Insights</a>
+        <a class="text-gray-400 hover:text-white transition-colors py-1" href="{{ '/' | relative_url }}#contact">Contact</a>
+        {% endif %}
+      {% endif %}
+
+      <div class="flex items-center gap-4 pt-4 border-t border-gray-800/50">
+        {% for item in site.data.navigation.languages %}
+        {% if item.language == page.lang %}
+        {% for link in item.links %}
+        <a class="text-sm text-gray-500 hover:text-white transition-colors uppercase" href="{{ link.url | relative_url }}">{{ link.title | upcase }}</a>
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+
+        <a href="#contact" class="bg-lime-400 hover:bg-lime-300 text-black font-display font-bold text-xs uppercase tracking-[0.1em] px-5 py-2.5 rounded-lg transition-colors ml-auto">
+          {% if page.lang == "es" %}Contrátame{% else %}Hire Me{% endif %}
+        </a>
+      </div>
     </div>
   </div>
 </nav>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    var menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  });
+
+  // Close mobile menu when clicking anchor links
+  document.querySelectorAll('#mobile-menu a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+  });
+</script>

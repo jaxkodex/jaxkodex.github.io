@@ -1,0 +1,95 @@
+<!-- Digital Craftsmanship Section -->
+<section id="craftsmanship" class="py-24 lg:py-32 relative">
+
+  <!-- Subtle lime glow in background -->
+  <div class="absolute top-0 left-0 w-[600px] h-[600px] bg-lime-400/[0.02] rounded-full blur-[150px] -translate-x-1/2 -translate-y-1/4"></div>
+
+  <div class="container mx-auto px-6 lg:px-12 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+      <!-- Left Column: Headline & CTA -->
+      <div>
+        <h2 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl text-white uppercase leading-[0.9] tracking-tight mb-8">
+          Digital<br>Crafts&shy;man&shy;ship
+        </h2>
+
+        <p class="text-gray-400 text-base leading-relaxed max-w-md mb-10">
+          {% if page.lang == "es" %}
+          Ayudo a empresas a construir decisiones técnicas sólidas, desde escalar la arquitectura hasta liderar equipos de ingeniería para Startups, Scale-Ups y Enterprise.
+          {% else %}
+          I help companies build robust technical foundations. From scaling architecture to leading engineering teams for Startups, Scale-Ups and Enterprise.
+          {% endif %}
+        </p>
+
+        <a href="#contact" class="inline-flex items-center gap-3 bg-lime-400 hover:bg-lime-300 text-black font-display font-bold text-sm uppercase tracking-[0.15em] px-7 py-4 rounded-lg transition-colors group">
+          {% if page.lang == "es" %}Iniciar un proyecto{% else %}Start a project{% endif %}
+          <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right Column: Numbered Services -->
+      <div class="space-y-0">
+
+        <!-- 01 -->
+        <div class="group border-t border-gray-800 py-8 lg:py-10">
+          <div class="flex items-start gap-6">
+            <span class="font-display font-bold text-3xl lg:text-4xl text-gray-800 group-hover:text-lime-400 transition-colors leading-none shrink-0">01.</span>
+            <div>
+              <h3 class="font-display font-bold text-xl lg:text-2xl text-white mb-2 group-hover:text-lime-400 transition-colors">
+                {% if page.lang == "es" %}Liderazgo Técnico{% else %}Technical Leadership{% endif %}
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                {% if page.lang == "es" %}
+                Construyendo y escalando equipos de ingeniería de alto rendimiento con procesos claros, cultura de ownership y excelencia técnica.
+                {% else %}
+                Building and scaling high-performance engineering teams with clear processes, ownership culture, and technical excellence.
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="group border-t border-gray-800 py-8 lg:py-10">
+          <div class="flex items-start gap-6">
+            <span class="font-display font-bold text-3xl lg:text-4xl text-gray-800 group-hover:text-lime-400 transition-colors leading-none shrink-0">02.</span>
+            <div>
+              <h3 class="font-display font-bold text-xl lg:text-2xl text-white mb-2 group-hover:text-lime-400 transition-colors">
+                {% if page.lang == "es" %}Arquitectura Cloud{% else %}Cloud Architecture{% endif %}
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                {% if page.lang == "es" %}
+                Diseño e implementación de infraestructura cloud escalable en AWS y GCP con Kubernetes, Terraform y prácticas de DevOps modernas.
+                {% else %}
+                Designing and implementing scalable cloud infrastructure on AWS and GCP with Kubernetes, Terraform, and modern DevOps practices.
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="group border-t border-b border-gray-800 py-8 lg:py-10">
+          <div class="flex items-start gap-6">
+            <span class="font-display font-bold text-3xl lg:text-4xl text-gray-800 group-hover:text-lime-400 transition-colors leading-none shrink-0">03.</span>
+            <div>
+              <h3 class="font-display font-bold text-xl lg:text-2xl text-white mb-2 group-hover:text-lime-400 transition-colors">
+                {% if page.lang == "es" %}Sistemas Backend{% else %}Backend Systems{% endif %}
+              </h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                {% if page.lang == "es" %}
+                Arquitectura y desarrollo de microservicios robustos en Go, Python y TypeScript. APIs de alto rendimiento, sistemas event-driven y pipelines de datos.
+                {% else %}
+                Architecture and development of robust microservices in Go, Python, and TypeScript. High-performance APIs, event-driven systems, and data pipelines.
+                {% endif %}
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
